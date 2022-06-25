@@ -1,14 +1,6 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Link from "next/link";
 
 function Home() {
-  const router = useRouter();
-
-  const onButtonClick = (link) => {
-    console.log('placing your order!.');
-    router.push(link);
-  };
-
   return (
     <>
       <h1>Home Page</h1>
@@ -18,8 +10,6 @@ function Home() {
       <Link href="/product">
         <a>product</a>
       </Link>
-      <button onClick={() => onButtonClick('/about')}>Place Order</button>
-      <button onClick={() => onButtonClick('/product/44')}>Place Order</button>
     </>
   );
 }

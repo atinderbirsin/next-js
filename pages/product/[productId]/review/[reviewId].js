@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
 
-function ReviewId() {
-    const router = useRouter();
-    const reviewId = router.query.reviewId;
+function Review() {
+  const router = useRouter();
+  const { reviewId, productId } = router.query;
 
-    return <h1>Review number {reviewId}</h1>
-};
+  return (
+    <h1>
+      Review {reviewId} of product {productId}
+    </h1>
+  );
+}
 
-export default ReviewId;
+export default Review;

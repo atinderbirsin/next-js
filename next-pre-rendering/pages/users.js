@@ -1,12 +1,13 @@
-function Users({ users }) {
+import User from "../components/user";
+
+function UserList({ users }) {
   return (
     <>
       <h1>Users page list</h1>
       {users.map((user) => {
         return (
           <div key={user.id}>
-            <h1>{user.name}</h1>
-            <h2>{user.email}</h2>
+            <User user={user}/>
           </div>
         );
       })}
@@ -25,4 +26,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Users;
+export default UserList;
